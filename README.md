@@ -8,6 +8,9 @@
 
 `yarn add telejs`
 
+If you use this in telegram-blocking-countries (like Russia), please use VPN to connect with it
+You should get the app_id and app_hash from https://core.telegram.org/api/obtaining_api_id and place it into config.js
+
 ## Initializing MtpProxy
 
 The main MTP wrapper class is `MtpProxy`, since you do not want to login into Telegram each time you run your app, you should implement two fucntions for saving and restoring the state of `MtpProxy` and pass them to `MtpProxy.init` method:
