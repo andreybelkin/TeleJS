@@ -4,6 +4,7 @@ import { getState, setState, initState } from '../state'
 import { dT, tsNow } from '../Utils'
 import { LogService, ErrorResponse } from '../Services'
 import { name } from '../../package.json'
+import { Config } from '../config'
 
 let isInitialized = false
 
@@ -56,8 +57,8 @@ export const signUpUser = (phoneNumber, firstName, lastName, codeInputPromise) =
         allow_flashcall: null,
         phone_number: phoneNumber,
         current_number: null,
-        api_id: 2496,
-        api_hash: '8da85b0d5bfe62527e5b244c209159c3'
+        api_id: Config.App.id,
+        api_hash: Config.App.hash
     }
 
     mtpInvokeApi("auth.sendCode", sendCodeCallParams)
@@ -92,8 +93,8 @@ export const signInUser = (phoneNumber, codeInputPromise) => new Promise((resolv
     const sendCodeCallParams = {
         sms_type: 5,
         phone_number: phoneNumber,
-        api_id: 2496,
-        api_hash: '8da85b0d5bfe62527e5b244c209159c3'
+        api_id: Config.App.id,
+        api_hash: Config.App.hash
     }
 
     mtpInvokeApi("auth.sendCode", sendCodeCallParams)
