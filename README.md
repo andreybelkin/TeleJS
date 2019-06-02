@@ -8,7 +8,7 @@
 
 `yarn add telejs`
 
-If you use this in telegram-blocking-countries (like Russia), please use VPN to connect with it
+If you use this in telegram-blocking-countries (like Russia), please use VPN to connect with it.
 You should get the app_id and app_hash from https://core.telegram.org/api/obtaining_api_id and place it into config.js
 
 ## Initializing MtpProxy
